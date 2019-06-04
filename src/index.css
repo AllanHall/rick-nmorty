@@ -8,5 +8,108 @@ html {
 
 body {
   margin: 0;
-  min-height: 100%;
+  background-image: url('./images/rnmstars.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+  background-attachment: fixed;
+  overflow-y: scroll;
+}
+
+.title {
+  font-size: 60px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5vh;
+  color: #9eefe5;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 17vw;
+  margin-right: 20vw;
+  margin-top: 5vh;
+  color: #79f072;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.home-button {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+hr {
+  border-top: 2px solid #79f072;
+}
+
+.links {
+  text-decoration: none;
+}
+
+.links:link {
+  color: #79f072;
+}
+
+.links:visited {
+  color: #79f072;
+}
+
+.links:hover {
+  color: #8a4fff;
+}
+
+.portal {
+  display: block;
+  margin: 0 auto;
+}
+
+.list {
+  color: #01baef;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: hsl(0, 0%, 0%, 0.35);
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#list-item {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.ind-links {
+  text-decoration: none;
+}
+
+.ind-links:link {
+  color: #01baef;
+}
+
+.ind-links:visited {
+  color: #01baef;
+}
+
+.ind-links:hover {
+  color: #8a4fff;
+}
+
+.episode-number {
+  font-size: 32px;
+  color: #01baef;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.air-date {
+  font-size: 32px;
+  color: #01baef;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
