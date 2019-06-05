@@ -7,21 +7,18 @@ import { Link } from 'react-router-dom'
 export default function Homepage() {
   const [episodeList, setEpisodeList] = useState([])
   useEffect(() => {
-    Axios.get('https://rickandmortyapi.com/api/episode')
-      .then(resp => {
-        console.log({ resp })
-        console.log(resp.data.results)
-        setEpisodeList(resp.data.results)
-      })
-      .then(
-        Axios.get('https://rickandmortyapi.com/api/episode/?page=2').then(
-          resp => {
-            console.log({ resp })
-            setEpisodeList(oldList => oldList.concat(resp.data.results))
-          }
-        )
+    Axios.get('https://rickandmortyapi.com/api/episode').then(resp => {
+      console.log({ resp })
+      console.log(resp.data.results)
+      setEpisodeList(resp.data.results)
+      Axios.get('https://rickandmortyapi.com/api/episode/?page=2').then(
+        resp => {
+          console.log({ resp })
+          setEpisodeList(oldList => oldList.concat(resp.data.results))
+        }
       )
-  }, '')
+    })
+  }, [])
   return (
     <>
       <div className="title">Episodes</div>

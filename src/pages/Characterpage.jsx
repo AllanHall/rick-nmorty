@@ -5,14 +5,13 @@ import Homebutton from '../components/Homebutton'
 import { Link } from 'react-router-dom'
 
 export default function Characterpage() {
-  const [character, setCharacter] = useState('')
   const [characterList, setCharacterList] = useState([])
   useEffect(() => {
     Axios.get('https://rickandmortyapi.com/api/character').then(resp => {
       console.log({ resp })
       setCharacterList(resp.data.results)
     })
-  }, '')
+  }, [])
   return (
     <>
       <div className="title">Characters</div>

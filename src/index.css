@@ -114,13 +114,13 @@ hr {
 }
 
 .mpb {
-  width: 26vw;
-  height: 24vh;
+  width: 360px;
+  height: 200px;
 }
 
 .rnm {
-  width: 26vw;
-  height: 24vh;
+  width: 360px;
+  height: 200px;
 }
 
 .home-button {
@@ -133,4 +133,17 @@ hr {
   display: block;
   margin: 0 auto;
   margin-top: 4vh;
+}
+
+.char-info {
+  font-size: 28px;
+  color: #01baef;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.list2 {
+  background-color: hsl(0, 0%, 0%, 0.35);
 }

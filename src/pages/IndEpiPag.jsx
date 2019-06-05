@@ -17,7 +17,7 @@ export default function IndEpiPag(props) {
         airDate: resp.data.air_date
       })
     })
-  }, '')
+  }, [])
   return (
     <>
       <div className="title">{episodeList.name}</div>
@@ -25,8 +25,8 @@ export default function IndEpiPag(props) {
       <div className="episode-number">{episodeList.episode}</div>
       <div className="air-date">Air Date: {episodeList.airDate}</div>
       <div className="images">
-        <img src={mpb} alt="mr poopy butthole" className="mpb" />
         <img src={rnm} alt="rick and morty" className="rnm" />
+        <img src={mpb} alt="mr poopy butthole" className="mpb" />
       </div>
     </>
   )
