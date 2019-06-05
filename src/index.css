@@ -128,3 +128,9 @@ hr {
   font-weight: bold;
   font-size: 24px;
 }
+
+.character-image {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4vh;
+}

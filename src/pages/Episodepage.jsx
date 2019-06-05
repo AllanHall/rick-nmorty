@@ -6,24 +6,25 @@ import { Link } from 'react-router-dom'
 
 export default function Homepage() {
   const [episode, setEpisode] = useState('')
-  const [episodeList2, setEpisodeList2] = useState([])
+  const [nextCall, setNextCall] = useState('')
+  // const [episodeList2, setEpisodeList2] = useState([])
   const [episodeList, setEpisodeList] = useState([])
   useEffect(() => {
-    Axios.get('https://rickandmortyapi.com/api/episode')
-      .then(resp => {
-        console.log({ resp })
-        console.log(resp.data.results)
-        setEpisodeList(resp.data.results)
-      })
-      // this is returning the movie stuff but not making a movie page for them
-      .then(
-        Axios.get('https://rickandmortyapi.com/api/episode/?page=2').then(
-          resp => {
-            console.log({ resp })
-            setEpisodeList2(resp.data.results)
-          }
-        )
-      )
+    Axios.get('https://rickandmortyapi.com/api/episode').then(resp => {
+      console.log({ resp })
+      console.log(resp.data.results)
+      setEpisodeList(resp.data.results)
+      setNextCall(resp.data.info.next)
+    })
+    // this is returning the movie stuff but not making a movie page for them
+    // .then(
+    //   Axios.get('https://rickandmortyapi.com/api/episode/?page=2').then(
+    //     resp => {
+    //       console.log({ resp })
+    //       setEpisodeList2(resp.data.results)
+    //     }
+    //   )
+    // )
   }, '')
   return (
     <>
@@ -37,13 +38,13 @@ export default function Homepage() {
             </Link>
           )
         })}
-        {episodeList2.map(episode2 => {
+        {/* {episodeList2.map(episode2 => {
           return (
             <Link className="ind-links" to={`/episodes/${episode.id}`}>
               <div id="list-item">{episode2.name}</div>
             </Link>
           )
-        })}
+        })} */}
       </div>
       <Homebutton />
     </>
