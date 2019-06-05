@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Axios from 'axios'
 
-export default function IndCharPag() {
-  const ubc = 'https://rickandmortyapi.com/api/character/1'
+export default function IndCharPag(props) {
+  const ubc = 'https://rickandmortyapi.com/api/character/'
   const [characterList, setCharacterList] = useState({})
   useEffect(() => {
-    Axios.get(`${ubc}`).then(resp => {
+    const charID = props.match.params.id
+    Axios.get(`${ubc}${charID}`).then(resp => {
       console.log({ resp })
       setCharacterList({
         name: resp.data.name,

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
-import Homebutton from '../components/Homebutton'
 import Axios from 'axios'
 import mpb from '../images/mpb.jpg'
 import rnm from '../images/rnm.gif'
 
-export default function IndEpiPag() {
-  const url = 'https://rickandmortyapi.com/api/episode/1'
+export default function IndEpiPag(props) {
+  const url = 'https://rickandmortyapi.com/api/episode/'
   const [episodeList, setEpisodeList] = useState({})
   useEffect(() => {
-    Axios.get(`${url}`).then(resp => {
+    const episodeID = props.match.params.id
+    Axios.get(`${url}${episodeID}`).then(resp => {
       console.log({ resp })
       setEpisodeList({
         name: resp.data.name,

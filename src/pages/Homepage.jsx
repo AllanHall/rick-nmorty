@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
-import Homebutton from '../components/Homebutton'
 import portal from '../images/portal.gif'
 
 export default function Homepage() {
