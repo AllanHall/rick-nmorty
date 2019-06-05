@@ -15,6 +15,7 @@ export default function Homepage() {
         console.log(resp.data.results)
         setEpisodeList(resp.data.results)
       })
+      // this is returning the movie stuff but not making a movie page for them
       .then(
         Axios.get('https://rickandmortyapi.com/api/episode/?page=2').then(
           resp => {

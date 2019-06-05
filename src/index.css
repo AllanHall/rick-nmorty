@@ -35,14 +35,8 @@ body {
   font-size: 24px;
 }
 
-.home-button {
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px;
-}
-
 hr {
-  border-top: 2px solid #79f072;
+  border: 2px solid #8a4fff;
 }
 
 .links {
@@ -98,7 +92,7 @@ hr {
 }
 
 .episode-number {
-  font-size: 32px;
+  font-size: 36px;
   color: #01baef;
   font-weight: bold;
   text-align: center;
@@ -106,10 +100,31 @@ hr {
 }
 
 .air-date {
-  font-size: 32px;
+  font-size: 36px;
   color: #01baef;
   font-weight: bold;
   text-align: center;
   margin-top: 5vh;
   margin-bottom: 5vh;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mpb {
+  width: 26vw;
+  height: 24vh;
+}
+
+.rnm {
+  width: 26vw;
+  height: 24vh;
+}
+
+.home-button {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
 }
