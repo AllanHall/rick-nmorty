@@ -1,8 +1,6 @@
 # Rick and Morty
 
-<h1>Rick And Morty</h1>
-
-<p>Creating a Rick and Morty site was a blast! Had a lot of fun with the styling and really started to get a grasp of API's and hooks.
+<p>Creating a Rick and Morty site was a blast! Had a lot of fun with the styling and really started to get a grasp of API's, hooks and react-router-dom.
 </p>
 
 <img src="src/images/RicknMorty.gif" />
