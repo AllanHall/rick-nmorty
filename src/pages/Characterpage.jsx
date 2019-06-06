@@ -6,12 +6,22 @@ import { Link } from 'react-router-dom'
 
 export default function Characterpage() {
   const [characterList, setCharacterList] = useState([])
+  const [nextAxios, setNextAxios] = useState('')
   useEffect(() => {
     Axios.get('https://rickandmortyapi.com/api/character').then(resp => {
       console.log({ resp })
+      console.log(resp.data.info.next)
       setCharacterList(resp.data.results)
+      setNextAxios(resp.data.info.next)
     })
   }, [])
+
+  const moreCharacters = () => {
+    Axios.get(`${nextAxios}`).then(resp => {
+      setCharacterList(oldList => oldList.concat(resp.data.results))
+      setNextAxios(resp.data.info.next)
+    })
+  }
   return (
     <>
       <div className="title">Characters</div>
@@ -25,6 +35,9 @@ export default function Characterpage() {
           )
         })}
       </div>
+      <button className="more-chars" onClick={() => moreCharacters()}>
+        Load More Characters
+      </button>
       <Homebutton />
     </>
   )

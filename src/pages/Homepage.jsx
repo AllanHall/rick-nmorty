@@ -8,6 +8,7 @@ export default function Homepage() {
       <div className="title">Rick and Morty</div>
       <Navbar />
       <img className="portal" src={portal} alt="portal" />
+      <div className="catchphrase">Wubba Lubba Dub-Dub!</div>
     </>
   )
 }

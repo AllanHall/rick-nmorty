@@ -20,8 +20,16 @@ body {
   font-size: 60px;
   text-align: center;
   font-weight: bold;
-  margin-top: 5vh;
+  margin-top: 4vh;
   color: #9eefe5;
+}
+
+.catchphrase {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 36vh;
+  color: #8a4fff;
 }
 
 .nav {
@@ -114,13 +122,13 @@ hr {
 }
 
 .mpb {
-  width: 360px;
-  height: 200px;
+  width: 35%;
+  height: 35%;
 }
 
 .rnm {
-  width: 360px;
-  height: 200px;
+  width: 35%;
+  height: 35%;
 }
 
 .home-button {
@@ -146,4 +154,13 @@ hr {
 
 .list2 {
   background-color: hsl(0, 0%, 0%, 0.35);
+}
+
+.more-chars {
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  background-color: #8a4fff;
+  font-weight: bold;
+  color: #9eefe5;
 }
